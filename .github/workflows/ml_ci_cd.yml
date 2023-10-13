@@ -13,4 +13,13 @@ jobs:
     - uses: actions/checkout@v2
     - name: python version
       run: python --version
-#Diapositiva 3 
+      #Diapositiva 3 
+    - name: pip install
+      run: python install -r requirements.txt
+      #Diapositiva 6
+    - name: train model
+      run: python model/train.py
+      #Diapositiva 7
+      
+
+    
