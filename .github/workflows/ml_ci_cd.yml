@@ -21,7 +21,7 @@ jobs:
       run: python model/train.py
       #Diapositiva 7
     - name: docker build
-      run: docker build -t ${{secrets.DOCKER_USER}}/${{secrets.MODEL_NAME}}:{{github.sha}}
+      run: docker build -t ${{secrets.DOCKER_USER}}/${{secrets.MODEL_NAME}}:${{github.sha}} .
       #Diapositiva 8
     - name: docker login
       env:
