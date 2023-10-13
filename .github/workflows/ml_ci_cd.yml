@@ -26,7 +26,7 @@ jobs:
       run: python model/train.py
 #update Github Action -  docker build
     - name: docker build
-      run: docker build -t ${{secrets.docker_user}}/${{secrets.model_name}}:${{github.event.client_payload.sha}} .
+      run: docker build -t ${{secrets.DOCKER_USER}}/${{secrets.MODEL_NAME}}:${{github.event.client_payload.sha}} .
 #update Github Action -  docker login, docker push
     - name: docker login
       env:
